@@ -36,3 +36,91 @@
     transform: rotate(360deg);
   }
 }
+
+.product-card {
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  width: 250px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  position: relative;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Zoom Image Style */
+.zoom-image-popup {
+  position: absolute;
+  top: 0;
+  left: 260px; /* ছবির পাশে দেখাতে চাইলে */
+  width: 400px;
+  height: auto;
+  z-index: 10;
+  border: 1px solid #ccc;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  animation: fadeIn 0.3s ease;
+}
+
+.zoom-image-popup img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.product-details {
+  padding: 10px;
+}
+
+.price {
+  font-size: 1.5em;
+  color: #ff0000;
+}
+
+.original-price {
+  text-decoration: line-through;
+  margin-left: 10px;
+  color: #999;
+}
+
+.discount {
+  color: #ff0000;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.buy-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.buy-button:hover {
+  background-color: #0056b3;
+}

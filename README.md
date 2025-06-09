@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# ProductCard Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The `ProductCard` is a React component that displays a product with zoom functionality on hover. It includes product details such as title, description, price, and a "Buy Now" button.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- 📸 Image zoom effect on hover
+- 📝 Product information (name, description, price, discount)
+- 🛒 Buy button
+- 💻 Responsive and interactive UI
 
-### `npm start`
+## Preview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Preview Image](https://img.drz.lazcdn.com/g/kf/Saef7f0a1e3874ab99874eed998c2db6eF.jpg_400x400q80.jpg_.webp)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Copy the `ProductCard.js` and `ProductCard.css` files to your React project.
+2. Import and use the component in your desired file:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```jsx
+import ProductCard from "./ProductCard";
 
-### `npm run build`
+function App() {
+  return (
+    <div className="App">
+      <ProductCard />
+    </div>
+  );
+}
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Zoom Functionality
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Hovering over the image will display a zoomed-in version.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The zoom effect follows the cursor.
 
-### `npm run eject`
+Implemented using onMouseEnter, onMouseLeave, and onMouseMove.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## /ProductCard
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+├── ProductCard.js // React component
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+└── ProductCard.css // Styles for the component
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Styling (ProductCard.css)
 
-## Learn More
+Make sure to style the following classes:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+.product-card
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+.image-container
 
-### Code Splitting
+.product-image
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+.zoom-box
 
-### Analyzing the Bundle Size
+.zoomed-image
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+.product-details
 
-### Making a Progressive Web App
+.price
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+.original-price
 
-### Advanced Configuration
+.discount
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+.buy-button
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+⚠️ Note: You may need to adjust zoom multiplier and positioning logic (zoomPosition.x \* 5 - 125) based on your layout.
